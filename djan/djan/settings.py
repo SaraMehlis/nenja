@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-=0ot%6b&-lh59)cic3&q_4(@6=w8q$r1heyrr_21^=%8mw5quf
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-saramehlis-nenja-dbnv5c9rj2y.ws-eu108.gitpod.io']
-
+CORS_ALLOWED_ORIGINS = [
+    'https://8000-saramehlis-nenja-dbnv5c9rj2y.ws-eu108.gitpod.io',
+]
 
 # Application definition
 
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'articles',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'djan.urls'
